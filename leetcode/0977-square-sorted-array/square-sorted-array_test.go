@@ -29,11 +29,18 @@ func Test_sortedSquares(t *testing.T) {
 			want: []int{4, 9, 9, 49, 121},
 		},
 		{
-			name: "Example 2",
+			name: "Example 3",
 			args: args{
 				nums: []int{-1},
 			},
 			want: []int{1},
+		},
+		{
+			name: "Example 4",
+			args: args{
+				nums: []int{-5, -3, -2, -1},
+			},
+			want: []int{1, 4, 9, 25},
 		},
 	}
 	for _, tt := range tests {

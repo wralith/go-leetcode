@@ -4,19 +4,19 @@ func sortedSquares(nums []int) []int {
 	size := len(nums)
 	pos := 0
 
+	// Only one item
+	result := make([]int, size)
 	if size == 1 {
-		one := make([]int, size)
-		one[0] = nums[0] * nums[0]
-		return one
+		result[0] = nums[0] * nums[0]
+		return result
 	}
 
-	for nums[pos] < 0 && pos < size {
+	for nums[pos] < 0 && pos < size-1 {
 		pos++
 	}
 
 	neg := pos - 1
 
-	result := make([]int, size)
 	var i int
 
 	for neg >= 0 && size > pos {
@@ -30,6 +30,7 @@ func sortedSquares(nums []int) []int {
 		i++
 	}
 
+	// First and Last
 	for neg >= 0 {
 		result[i] = nums[neg] * nums[neg]
 		neg--
