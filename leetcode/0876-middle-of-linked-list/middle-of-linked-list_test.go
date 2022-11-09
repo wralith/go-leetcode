@@ -4,24 +4,26 @@ import (
 	"fmt"
 	"reflect"
 	"testing"
+
+	"github.com/wralith/go-leetcode/types"
 )
 
 // from github.com/halfrost
-func Ints2List(nums []int) *ListNode {
+func Ints2List(nums []int) *types.ListNode {
 	if len(nums) == 0 {
 		return nil
 	}
 
-	l := &ListNode{}
+	l := &types.ListNode{}
 	t := l
 	for _, v := range nums {
-		t.Next = &ListNode{Val: v}
+		t.Next = &types.ListNode{Val: v}
 		t = t.Next
 	}
 	return l.Next
 }
 
-func List2Ints(head *ListNode) []int {
+func List2Ints(head *types.ListNode) []int {
 	limit := 100
 
 	times := 0

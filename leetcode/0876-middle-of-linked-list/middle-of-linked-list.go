@@ -1,9 +1,6 @@
 package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/wralith/go-leetcode/types"
 
 /**
  * Definition for singly-linked list.
@@ -12,7 +9,7 @@ type ListNode struct {
  *     Next *ListNode
  * }
  */
-func middleNode(head *ListNode) *ListNode {
+func middleNode(head *types.ListNode) *types.ListNode {
 	if head.Next == nil || head == nil {
 		return head
 	}
