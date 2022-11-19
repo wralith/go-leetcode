@@ -27,3 +27,11 @@ func MakeListFromInts(nums ...int) *ListNode {
 
 	return l.Next
 }
+
+func MakeIntSliceFromList(head *ListNode) (res []int) {
+	for head != nil {
+		res = append(res, head.Val)
+		head = head.Next
+	}
+	return
+}
