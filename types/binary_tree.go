@@ -8,6 +8,13 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+type TreeNodeWithNext struct {
+	Val   int
+	Left  *TreeNodeWithNext
+	Right *TreeNodeWithNext
+	Next  *TreeNodeWithNext
+}
+
 // Direct copy from https://github.com/halfrost/LeetCode-Go/structures
 func Ints2TreeNode(ints []int) *TreeNode {
 	n := len(ints)
